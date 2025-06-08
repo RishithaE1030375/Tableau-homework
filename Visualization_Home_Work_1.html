@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Multiple Tableau Dashboards</title>
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <link href="http://fonts.googleapis.com/css?family=Annie+Use+Your+Telescope" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
+</head>
+<body>
+<h3  style="background-color: aquamarine; padding: 5px;">Tableau HomeWork  Rishitha Erupaka[#1030375]</h3>
+    <div id="header">
+        <div id="nav" style="background-color: aliceblue; padding: 10px;">
+            <a href="#cars">Cars</a>
+            <a href="#mutualfunds">Mutual Funds</a>
+            <a href="#films">Films</a> 
+            <a href="#grocerystores">Grocery Stores</a> 
+            <a href="#cereals">Cereals</a> 
+            <span style="word-spacing:normal; color:black; font-family:'Annie Use Your Telescope', arial, serif; font-size:20px;">← Click a tab to see details!</span>
+        </div>
+        </div>
+    </div>
+
+    <div id="page-wrap">
+
+        <!-- Cars Dashboard -->
+        <div id="page1">
+            <a name="cars"></a>
+            <h3>Cars Dashboard</h3>
+		<p>The following visualization provides a comparative analysis of cars based on their country of origin such as American, European, and Japanese highlighting some key performance metrics such as horsepower, miles per gallon, acceleration, and cylinder count. <br> It enables viewers to easily identify regional differences in automotive engineering, showing that while American cars tend to have higher horsepower, Japanese cars are generally more fuel-efficient.</p>
+            <div id="vizCars" style="width:100%; height:750px;"></div>
+        </div>
+
+        <!-- Mutual Funds Dashboard -->
+        <div id="page2">
+            <a name="mutualfunds"></a>
+            <h3>Mutual Funds Dashboard</h3>
+		<p>The following visualization presents an analysis of mutual funds based on key financial indicators such as returns, risk, and fund category. <br> It helps investors evaluate and compare fund performance, enabling informed investment decisions by highlighting the balance between potential returns and associated risks.</p>
+            <div id="vizFunds" style="width:100%; height:750px;"></div>
+        </div>
+
+        <!-- Films Dashboard -->
+        <div id="page3">
+            <a name="films"></a>
+            <h3>Films Dashboard</h3>
+		<p>The following visualization analyzes various films by comparing attributes such as IMDb score, gross earnings, and content rating. <br> It provides insights into how films with higher ratings and broader audience appeal often achieve greater box office success, helping viewers understand the relationship between quality, audience reach, and financial performance.</p>
+            <div id="vizFilms" style="width:100%; height:750px;"></div>
+        </div>
+
+        <!-- Grocery Stores Dashboard -->
+        <div id="page4">
+            <a name="grocerystores"></a>
+            <h3>Grocery Stores Dashboard</h3>
+		<p>The following visualization offers a comparative view of grocery store data, focusing on sales performance across different departments and time periods. <br> It helps identify trends and high-performing categories, enabling stakeholders to make data-driven decisions for inventory management and marketing strategies.</p>
+            <div id="vizGrocery" style="width:100%; height:750px;"></div>
+        </div>
+
+        <!-- Cereals Dashboard -->
+        <div id="page5">
+            <a name="Cereals"></a>
+            <h3>Cereals Dashboard</h3>
+		<p>The following visualization presents a clear comparison of cereal products based on nutritional factors such as calories, sugar, protein, and rating. <br> It effectively highlights how healthier cereals are those with lower sugar and higher protein—tend to receive better ratings, helping consumers make more informed dietary choices.</p>
+            <div id="vizCereals" style="width:100%; height:750px;"></div>
+        </div>
+
+<div style="padding:25px;">
+</div>
+
+    </div>
+
+    <script type="text/javascript">
+        function loadViz(containerId, url) {
+            var container = document.getElementById(containerId);
+            var options = {
+                hideTabs: true,
+                width: "100%",
+                height: "750px"
+            };
+            new tableau.Viz(container, url, options);
+        }
+
+        loadViz("vizCars", "https://public.tableau.com/views/RishithaErupakaVisualization1/Sheet2");
+        loadViz("vizFunds", "https://public.tableau.com/views/RishithaErupakaVisualization2/Sheet1");
+        loadViz("vizFilms", "https://public.tableau.com/views/RishithaErupakaVisualization3/Sheet1");
+        loadViz("vizGrocery", "https://public.tableau.com/views/RishithaErupakaVisualization4/Sheet2");
+        loadViz("vizCereals", "https://public.tableau.com/views/RishithaErupakaVisualization5/Sheet1");
+    </script>
+
+</body>
+</html>
